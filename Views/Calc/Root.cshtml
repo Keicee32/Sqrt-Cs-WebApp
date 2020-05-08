@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Square Root Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Square Root Calculator</h1>
+    
+    @* <p>The result is: @ViewBag.Result</p>
+    <p>The result is: @ViewBag.Result2</p> *@
+
+    <p> @ViewBag.Result</p>
+    <p> @ViewBag.ErrorMessage </p>
+
+    <form asp-controller="Calc" asp-action="Root" method="POST">
+        First: <input type="number" placeholder="First Number" name="firstNumber" required><br/>
+        second: <input type="number" placeholder="Second Number" name="secondNumber" required><br/>
+        <button type="submit"> Submit </button>
+
+    </form>
+
+</div>
